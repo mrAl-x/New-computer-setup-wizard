@@ -1,6 +1,6 @@
 <template>
   <li class="item">
-    <input type="checkbox" :value="code" v-model="bool" :id="code">
+    <input type="checkbox" :value="code" v-model="isChecked" :id="code">
     <label :for="code">{{name}}</label>
   </li>
 </template>
@@ -20,9 +20,18 @@ export default {
       required: true
     }
   },
-  mounted: function() {console.log(this.appName)},
+  data() {
+    return {
+      isChecked: false,
+    };
+  },
+  watch: {
+    isChecked(newVal, oldVal) {
+      this.$emit('isAppChecked', {code: this.code, isChecked: newVal});
+    }
+  },
 };
 </script>
 
-<style src="./AppCheck.css" />
+<style src="./AppCheck.css" scoped />
 
