@@ -17,7 +17,8 @@
         @isAppChecked="updateCode"
       />
     </ul>
-    <code @click="copyContent" ref="caskCodeLine">$ brew cask install
+    <code @click="copyContent" ref="caskCodeLine">
+      $ brew cask install
       <template v-for="app in selectedApps">{{`${app} `}}</template>
     </code>
   </div>
@@ -57,8 +58,12 @@ export default {
     },
     copyContent(e) {
       // e.target;
-      this.$refs.caskCodeLine;
-      console.log(e.target.innerText);
+      const regex = /[^$]*/g;
+      const commandCode = e.target.innerText.match(regex);
+
+      this.$copyText(e.target.innerText).then(() =>
+        console.log("target:", e.target.innerText, " copied:", commandCode)
+      );
     }
   }
 };
