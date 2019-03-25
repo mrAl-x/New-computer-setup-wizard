@@ -44,6 +44,10 @@ module.exports = [
     code: 'sourcetree',
   },
   {
+    name: 'Fork',
+    code: 'fork',
+  },
+  {
     name: '1Password',
     code: '1password',
   },
@@ -62,5 +66,17 @@ module.exports = [
   {
     name: 'Zeplin',
     code: 'zeplin',
+  },
+  {
+    name: 'Toggl',
+    code: 'toggl',
+  },
+  {
+    name: 'Droplr',
+    code: 'droplr',
+  },
+  {
+    name: 'App Cleaner',
+    code: 'appcleaner',
   },
 ];
