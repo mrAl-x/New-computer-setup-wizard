@@ -57,12 +57,11 @@ export default {
       }
     },
     copyContent(e) {
-      // e.target;
       const regex = /[^$]*/g;
-      const commandCode = e.target.innerText.match(regex);
+      const command = e.target.innerText.substr(2);
 
-      this.$copyText(e.target.innerText).then(() =>
-        console.log("target:", e.target.innerText, " copied:", commandCode)
+      this.$copyText(command).then(() =>
+        console.log("Command copied:", command)
       );
     }
   }
