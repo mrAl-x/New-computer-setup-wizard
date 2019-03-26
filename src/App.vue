@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import appList from "./data/appList";
+import appList from "./shared/data/appList";
 import AppCheck from "./components/app-check/AppCheck.vue";
 
 export default {
