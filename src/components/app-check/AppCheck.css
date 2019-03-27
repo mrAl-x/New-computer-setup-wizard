@@ -1,2 +1,52 @@
+:root {
+  --gray-light: #f0f0f0;
+  --gray: #ccc;
+}
+
 .item {
+  position: relative;
+  flex: 20%;
+  max-width: 105px;
+  height: 90px;
+  margin: 0 10px 50px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px;
+}
+
+.checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.backgroundEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: none;
+}
+
+.checkbox:hover ~ .backgroundEffect {
+  background-color: var(--gray-light);
+}
+
+.checkbox:checked ~ .backgroundEffect {
+  background-color: var(--gray);
+}
+
+.label {
 }

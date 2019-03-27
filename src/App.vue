@@ -1,26 +1,29 @@
 <template>
   <div id="app">
-    <p>You should first install XCode by pasting the following code in your terminal*:</p>
-    <code @click="copyContent" ref="xcodeCodeLine">$ xcode-select --install</code>
-    <p>Then we need to install homebrew:</p>
-    <code
-      @click="copyContent"
-      ref="xcodeCodeLine"
-    >$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>
-    <p>Now you can just select the apps you want to install:</p>
-    <ul class="list">
-      <AppCheck
-        v-for="(app, index) in apps"
-        :name="app.name"
-        :code="app.code"
-        :key="index"
-        @isAppChecked="updateCode"
-      />
-    </ul>
-    <code @click="copyContent" ref="caskCodeLine">
-      $ brew cask install
-      <template v-for="app in selectedApps">{{`${app} `}}</template>
-    </code>
+    <main class="mainWrapper">
+      <p>You should first install XCode by pasting the following code in your terminal*:</p>
+      <code @click="copyContent" ref="xcodeCodeLine">$ xcode-select --install</code>
+      <p>Then we need to install homebrew:</p>
+      <code
+        @click="copyContent"
+        ref="xcodeCodeLine"
+      >$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>
+      <p>Now you can just select the apps you want to install:</p>
+      <ul class="list">
+        <AppCheck
+          v-for="(app, index) in apps"
+          :name="app.name"
+          :code="app.code"
+          :logoUrl="app.logoUrl"
+          :key="index"
+          @isAppChecked="updateCode"
+        />
+      </ul>
+      <code @click="copyContent" ref="caskCodeLine">
+        $ brew cask install
+        <template v-for="app in selectedApps">{{`${app} `}}</template>
+      </code>
+    </main>
   </div>
 </template>
 

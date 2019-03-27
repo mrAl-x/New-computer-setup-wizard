@@ -1,4 +1,27 @@
+:root {
+  --code-gray: #1b2b34;
+  --white: #fff;
+}
+
+code {
+  padding: 15px 50px 15px 20px;
+  background-color: var(--code-gray);
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.mainWrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+}
+
 .list {
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   list-style: none;
   padding-left: 0;
 }

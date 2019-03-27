@@ -1,12 +1,13 @@
 <template>
   <li class="item">
-    <input type="checkbox" :value="code" v-model="isChecked" :id="code">
-    <label :for="code">{{name}}</label>
+    <img class="logo" :src="getImageUrl(logoUrl)">
+    <input type="checkbox" class="checkbox" :value="code" v-model="isChecked" :id="code">
+    <label class="label" :for="code">{{name}}</label>
+    <div class="backgroundEffect"></div>
   </li>
 </template>
 
 <script lang="js">
-
 
 export default {
   name: "AppCheck",
@@ -18,12 +19,21 @@ export default {
     code: {
       type: String,
       required: true
+    },
+    logoUrl: {
+      type: String,
+      required: true
     }
   },
   data() {
     return {
       isChecked: false,
     };
+  },
+  methods: {
+    getImageUrl(code) {
+      return require(`../../${code}`);
+    }
   },
   watch: {
     isChecked(newVal, oldVal) {
@@ -33,5 +43,5 @@ export default {
 };
 </script>
 
-<style src="./AppCheck.css" scoped />
+<style src="./AppCheck.css" />
 
