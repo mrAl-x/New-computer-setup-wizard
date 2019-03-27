@@ -114,4 +114,9 @@ module.exports = [
     code: 'filezilla',
     logoUrl: 'shared/assets/app_logos/filezilla.png',
   },
+  {
+    name: 'Spectacle',
+    code: 'spectacle',
+    logoUrl: 'shared/assets/app_logos/spectacle.png',
+  },
 ];
