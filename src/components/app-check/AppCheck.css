@@ -8,8 +8,9 @@
   position: relative;
   flex: 20%;
   max-width: 105px;
-  height: 90px;
-  margin: 0 10px 50px;
+  height: auto;
+  margin: 0 10px 30px;
+  padding: 10px;
   text-align: center;
 }
 
