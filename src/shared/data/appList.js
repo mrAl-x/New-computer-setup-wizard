@@ -109,4 +109,9 @@ module.exports = [
     code: 'microsoft-teams',
     logoUrl: 'shared/assets/app_logos/microsoft-teams.png',
   },
+  {
+    name: 'Filezilla',
+    code: 'filezilla',
+    logoUrl: 'shared/assets/app_logos/filezilla.png',
+  },
 ];
