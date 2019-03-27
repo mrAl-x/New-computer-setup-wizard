@@ -119,4 +119,19 @@ module.exports = [
     code: 'spectacle',
     logoUrl: 'shared/assets/app_logos/spectacle.png',
   },
+  {
+    name: 'Principle',
+    code: 'principle',
+    logoUrl: 'shared/assets/app_logos/principle.png',
+  },
+  {
+    name: 'Docker',
+    code: 'docker',
+    logoUrl: 'shared/assets/app_logos/docker.png',
+  },
+  {
+    name: 'Google Drive',
+    code: 'google-drive-file-stream',
+    logoUrl: 'shared/assets/app_logos/google-drive-file-stream.png',
+  },
 ];
