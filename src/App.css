@@ -1,6 +1,17 @@
 :root {
   --code-gray: #1b2b34;
   --white: #fff;
+  --green: #5eb468;
+}
+
+html {
+  /* Base font-size to directly translate px to rem (50rem = 50px)  */
+  font-size: 6.25%;
+}
+
+body {
+  font-size: 18rem;
+  font-family: sans-serif;
 }
 
 code {
@@ -12,8 +23,40 @@ code {
 
 .mainWrapper {
   position: relative;
+  margin: 20px auto 80px;
+  width: 50%;
+}
+
+.codeWrapper {
+  position: relative;
+  width: 100%;
   margin: 0 auto;
-  width: 80%;
+}
+
+.codeWrapper .codeArea {
+  display: block;
+}
+
+.codeWrapper .message {
+  position: absolute;
+  bottom: -25px;
+  left: 0px;
+  z-index: 1;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 5px 10px;
+  background-color: var(--green);
+  color: var(--white);
+  font-size: 10rem;
+  border-radius: 6px;
+  opacity: 0;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.codeWrapper .message--active {
+  margin-bottom: 8px;
+  opacity: 1;
 }
 
 .list {

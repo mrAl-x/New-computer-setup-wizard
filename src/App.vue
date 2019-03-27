@@ -2,12 +2,21 @@
   <div id="app">
     <main class="mainWrapper">
       <p>You should first install XCode by pasting the following code in your terminal*:</p>
-      <code @click="copyContent" ref="xcodeCodeLine">$ xcode-select --install</code>
+      <div class="codeWrapper">
+        <code id="xcode" class="codeArea" @click="copyContent">$ xcode-select --install</code>
+        <p :class="['message', {'message--active': successMessage.xcode}]">{{successMessage.xcode}}</p>
+      </div>
       <p>Then we need to install homebrew:</p>
-      <code
-        @click="copyContent"
-        ref="xcodeCodeLine"
-      >$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>
+      <div class="codeWrapper">
+        <code
+          id="homebrew"
+          class="codeArea"
+          @click="copyContent"
+        >$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>
+        <p
+          :class="['message', {'message--active': successMessage.homebrew}]"
+        >{{successMessage.homebrew}}</p>
+      </div>
       <p>Now you can just select the apps you want to install:</p>
       <ul class="list">
         <AppCheck
@@ -19,10 +28,13 @@
           @isAppChecked="updateCode"
         />
       </ul>
-      <code @click="copyContent" ref="caskCodeLine">
-        $ brew cask install
-        <template v-for="app in selectedApps">{{`${app} `}}</template>
-      </code>
+      <div class="codeWrapper">
+        <code id="cask" class="codeArea" @click="copyContent" ref="caskCodeLine">
+          $ brew cask install
+          <template v-for="app in selectedApps">{{`${app} `}}</template>
+        </code>
+        <p :class="['message', {'message--active': successMessage.cask}]">{{successMessage.cask}}</p>
+      </div>
     </main>
   </div>
 </template>
@@ -40,8 +52,13 @@ export default {
   data: function() {
     return {
       apps: appList,
+      copyCode: "copy code",
       selectedApps: [],
-      copyCode: "copy code"
+      successMessage: {
+        cask: null,
+        homebrew: null,
+        xcode: null
+      }
     };
   },
   methods: {
@@ -62,9 +79,10 @@ export default {
     copyContent(e) {
       const regex = /[^$]*/g;
       const command = e.target.innerText.substr(2);
+      const messageId = e.target.id;
 
-      this.$copyText(command).then(() =>
-        console.log("Command copied:", command)
+      this.$copyText(command).then(
+        () => (this.successMessage[messageId] = "Code copied")
       );
     }
   }
