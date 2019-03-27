@@ -1,6 +1,8 @@
 <template>
   <li class="item">
-    <img class="logo" :src="getImageUrl(logoUrl)">
+    <figure class="logoWrapper">
+      <img class="logo" :src="getImageUrl(logoUrl)">
+    </figure>
     <input type="checkbox" class="checkbox" :value="code" v-model="isChecked" :id="code">
     <label class="label" :for="code">{{name}}</label>
     <div class="backgroundEffect"></div>

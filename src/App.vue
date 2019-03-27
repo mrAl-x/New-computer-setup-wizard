@@ -35,6 +35,13 @@
         </code>
         <p :class="['message', {'message--active': successMessage.cask}]">{{successMessage.cask}}</p>
       </div>
+      <p>
+        You'll have to enter your password in the terminal
+        <br>
+        <small
+          class="sidenote"
+        >You won't be able to see yourself typing in the password but, don't worry, the terminal is paying attention 😉</small>
+      </p>
     </main>
   </div>
 </template>

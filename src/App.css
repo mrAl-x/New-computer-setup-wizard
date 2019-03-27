@@ -35,6 +35,7 @@ code {
 
 .codeWrapper .codeArea {
   display: block;
+  margin-bottom: 50px;
 }
 
 .codeWrapper .message {
