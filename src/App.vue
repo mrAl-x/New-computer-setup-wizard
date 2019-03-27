@@ -88,9 +88,13 @@ export default {
       const command = e.target.innerText.substr(2);
       const messageId = e.target.id;
 
-      this.$copyText(command).then(
-        () => (this.successMessage[messageId] = "Code copied")
-      );
+      this.$copyText(command).then(() => {
+        this.successMessage[messageId] = "Code copied";
+
+        return setTimeout(() => {
+          this.successMessage[messageId] = null;
+        }, 2000);
+      });
     }
   }
 };
