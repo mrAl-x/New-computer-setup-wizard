@@ -30,7 +30,7 @@
       </ul>
       <div class="codeWrapper">
         <code id="cask" class="codeArea" @click="copyContent" ref="caskCodeLine">
-          $ brew cask install
+          $ brew cask install --force
           <template v-for="app in selectedApps">{{`${app} `}}</template>
         </code>
         <p :class="['message', {'message--active': successMessage.cask}]">{{successMessage.cask}}</p>
