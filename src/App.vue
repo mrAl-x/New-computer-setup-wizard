@@ -1,12 +1,22 @@
 <template>
   <div id="app">
     <main class="mainWrapper">
-      <p>You should first install XCode by pasting the following code in your terminal*:</p>
+      <h1>First Setup Wizard 🧙‍♂️</h1>
+      <p>This pages allows you to pick multiple apps and install them all at once through your computer's terminal.</p>
+      <h2>Requirements</h2>
+      <p>
+        You should first install
+        <strong>XCode</strong>, if you haven't already, by pasting the following code in your terminal:
+      </p>
+      <small class="sidenote">Pro tip: you can just click any code section to copy it</small>
       <div class="codeWrapper">
         <code id="xcode" class="codeArea" @click="copyContent">$ xcode-select --install</code>
         <p :class="['message', {'message--active': successMessage.xcode}]">{{successMessage.xcode}}</p>
       </div>
-      <p>Then we need to install homebrew:</p>
+      <p>
+        Then you need to install
+        <a href="https://brew.sh/">Homebrew</a>:
+      </p>
       <div class="codeWrapper">
         <code
           id="homebrew"
@@ -17,7 +27,7 @@
           :class="['message', {'message--active': successMessage.homebrew}]"
         >{{successMessage.homebrew}}</p>
       </div>
-      <p>Now you can just select the apps you want to install:</p>
+      <p>Pick select the apps you want to install:</p>
       <ul class="list">
         <AppCheck
           v-for="(app, index) in apps"
@@ -28,6 +38,7 @@
           @isAppChecked="updateCode"
         />
       </ul>
+      <p>Finally you can copy and paste the code bellow on your terminal and you're golden! 👌</p>
       <div class="codeWrapper">
         <code id="cask" class="codeArea" @click="copyContent" ref="caskCodeLine">
           $ brew cask install --force
@@ -36,7 +47,7 @@
         <p :class="['message', {'message--active': successMessage.cask}]">{{successMessage.cask}}</p>
       </div>
       <p>
-        You'll have to enter your password in the terminal
+        Oh! One more thing you'll have to enter your password in the terminal
         <br>
         <small
           class="sidenote"
