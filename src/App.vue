@@ -28,9 +28,10 @@
         >{{successMessage.homebrew}}</p>
       </div>
       <p>Pick select the apps you want to install:</p>
+      <input type="text" class="filterInput" v-model="filter" placeholder="Search">
       <ul class="list">
         <AppCheck
-          v-for="(app, index) in apps"
+          v-for="(app, index) in filteredApps"
           :name="app.name"
           :code="app.code"
           :logoUrl="app.logoUrl"
@@ -71,6 +72,7 @@ export default {
     return {
       apps: appList,
       copyCode: "copy code",
+      filter: "",
       selectedApps: [],
       successMessage: {
         cask: null,
@@ -78,6 +80,15 @@ export default {
         xcode: null
       }
     };
+  },
+  computed: {
+    filteredApps() {
+      /* Regex will be case insentive */
+      const regex = new RegExp(this.filter, "i");
+      const filteredApps = this.apps.filter(app => app.name.match(regex));
+
+      return filteredApps;
+    }
   },
   methods: {
     updateCode(app) {

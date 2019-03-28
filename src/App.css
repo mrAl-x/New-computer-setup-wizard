@@ -63,6 +63,23 @@ code {
   opacity: 1;
 }
 
+.filterInput {
+  display: block;
+  width: 150px;
+  height: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  padding: 5px 10px;
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  font-size: 15rem;
+  outline: none;
+}
+
+.filterInput:focus {
+  border: 1px solid var(--code-gray);
+}
+
 .list {
   margin: 0 auto;
   max-width: 600px;
