@@ -1,6 +1,7 @@
 <template>
   <div>
-    <input type="text" class="filterInput" v-model="filter" placeholder="Search">
+    <label class="invisible" for="searchBox">Search app</label>
+    <input type="text" id="searchBox" class="filterInput" v-model="filter" placeholder="Search">
     <ul class="categoryList">
       <li class="category" v-for="(category, index) in categories" :key="index">
         <h2

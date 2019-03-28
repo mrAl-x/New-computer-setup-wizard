@@ -37,3 +37,8 @@
   list-style: none;
   padding-left: 0;
 }
+
+.invisible {
+  position: absolute;
+  opacity: 0;
+}

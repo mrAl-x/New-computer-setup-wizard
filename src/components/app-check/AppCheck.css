@@ -29,10 +29,15 @@
   top: 0;
   left: 0;
   opacity: 0;
+  visibility: visible;
   z-index: 10;
   width: 100%;
   height: 100%;
   cursor: pointer;
+}
+
+.checkbox:focus ~ .backgroundEffect {
+  background-color: var(--gray-light);
 }
 
 .backgroundEffect {
