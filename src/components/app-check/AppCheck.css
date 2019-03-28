@@ -1,3 +1,5 @@
+@import '../../shared/styles/variables.css';
+
 .item {
   position: relative;
   flex: 20%;
