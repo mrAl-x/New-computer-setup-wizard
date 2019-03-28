@@ -3,7 +3,10 @@
     <input type="text" class="filterInput" v-model="filter" placeholder="Search">
     <ul class="categoryList">
       <li class="category" v-for="(category, index) in categories" :key="index">
-        <h2 class="category__title">{{ category }}</h2>
+        <h2
+          v-if="filter === '' || appsOfCategory(category).length > 0"
+          class="category__title"
+        >{{ category }}</h2>
         <ul class="appList">
           <AppCheck
             v-for="(app, index) in appsOfCategory(category)"
@@ -47,7 +50,7 @@ export default {
   },
   methods: {
     getCategories() {
-      const filteredApps = apps.reduce((acc, app) => {
+      const categories = apps.reduce((acc, app) => {
         if (!acc) {
           return [app.category];
         }
@@ -57,12 +60,14 @@ export default {
           : [...acc, app.category];
       }, null);
 
-      return filteredApps;
+      return categories;
     },
     appsOfCategory(category) {
-      const filteredApps = apps.filter(app => app.category === category);
+      const appsOfCategory = this.filteredApps.filter(
+        app => app.category === category
+      );
 
-      return filteredApps;
+      return appsOfCategory;
     }
   }
 };

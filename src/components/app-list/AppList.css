@@ -1,3 +1,5 @@
+/* @import './shared/styles/variables.css'; */
+
 .filterInput {
   display: block;
   width: 150px;
@@ -21,6 +23,9 @@
 }
 
 .category__title {
+  color: var(--code-gray);
+  font-size: 22rem;
+  font-weight: normal;
 }
 
 .appList {
