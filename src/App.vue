@@ -2,7 +2,7 @@
   <div id="app">
     <main class="mainWrapper">
       <h1>First Setup Wizard 🧙‍♂️</h1>
-      <p>This pages allows you to pick multiple apps and install them all at once through your computer's terminal.</p>
+      <p>This page allows you to pick multiple apps and install them all at once through your computer's terminal.</p>
       <h2>Requirements</h2>
       <p>
         You should first install
