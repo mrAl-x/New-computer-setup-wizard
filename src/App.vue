@@ -28,17 +28,7 @@
         >{{successMessage.homebrew}}</p>
       </div>
       <p>Pick select the apps you want to install:</p>
-      <input type="text" class="filterInput" v-model="filter" placeholder="Search">
-      <ul class="list">
-        <AppCheck
-          v-for="(app, index) in filteredApps"
-          :name="app.name"
-          :code="app.code"
-          :logoUrl="app.logoUrl"
-          :key="index"
-          @isAppChecked="updateCode"
-        />
-      </ul>
+      <AppList @handleAppCheck="updateCode"/>
       <p>Finally you can copy and paste the code bellow on your terminal and you're golden! 👌</p>
       <div class="codeWrapper">
         <code id="cask" class="codeArea" @click="copyContent" ref="caskCodeLine">
@@ -67,20 +57,14 @@
 </template>
 
 <script>
-import appList from "./shared/data/appList";
-import AppCheck from "./components/app-check/AppCheck.vue";
+import AppList from "./components/app-list/AppList.vue";
 
 export default {
   name: "app",
-  use: function() {
-    return VueClipboard;
-  },
-  components: { AppCheck },
+  components: { AppList },
   data: function() {
     return {
-      apps: appList,
       copyCode: "copy code",
-      filter: "",
       selectedApps: [],
       successMessage: {
         cask: null,
@@ -89,16 +73,20 @@ export default {
       }
     };
   },
-  computed: {
-    filteredApps() {
-      /* Regex will be case insentive */
-      const regex = new RegExp(this.filter, "i");
-      const filteredApps = this.apps.filter(app => app.name.match(regex));
-
-      return filteredApps;
-    }
-  },
   methods: {
+    copyContent(e) {
+      const regex = /[^$]*/g;
+      const command = e.target.innerText.substr(2);
+      const messageId = e.target.id;
+
+      this.$copyText(command).then(() => {
+        this.successMessage[messageId] = "Code copied";
+
+        return setTimeout(() => {
+          this.successMessage[messageId] = null;
+        }, 2000);
+      });
+    },
     updateCode(app) {
       if (app.isChecked) {
         this.selectedApps = [...this.selectedApps, app.code];
@@ -112,19 +100,6 @@ export default {
           ...this.selectedApps.slice(index + 1)
         ];
       }
-    },
-    copyContent(e) {
-      const regex = /[^$]*/g;
-      const command = e.target.innerText.substr(2);
-      const messageId = e.target.id;
-
-      this.$copyText(command).then(() => {
-        this.successMessage[messageId] = "Code copied";
-
-        return setTimeout(() => {
-          this.successMessage[messageId] = null;
-        }, 2000);
-      });
     }
   }
 };

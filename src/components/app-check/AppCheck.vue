@@ -39,7 +39,7 @@ export default {
   },
   watch: {
     isChecked(newVal, oldVal) {
-      this.$emit('isAppChecked', {code: this.code, isChecked: newVal});
+      this.$emit('handleAppCheck', {code: this.code, isChecked: newVal});
     }
   },
 };
