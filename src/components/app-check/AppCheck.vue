@@ -1,7 +1,7 @@
 <template>
   <li class="item">
     <figure class="logoWrapper">
-      <img class="logo" :src="getImageUrl(logoUrl)">
+      <img class="logo" :alt="`${name} logo`" :src="getImageUrl(logoUrl)">
     </figure>
     <input type="checkbox" class="checkbox" :value="code" v-model="isChecked" :id="code">
     <label class="label" :for="code">{{name}}</label>
@@ -39,7 +39,7 @@ export default {
   },
   watch: {
     isChecked(newVal, oldVal) {
-      this.$emit('isAppChecked', {code: this.code, isChecked: newVal});
+      this.$emit('handleAppCheck', {code: this.code, isChecked: newVal});
     }
   },
 };

@@ -1,8 +1,4 @@
-:root {
-  --code-gray: #1b2b34;
-  --white: #fff;
-  --green: #5eb468;
-}
+@import './shared/styles/variables.css';
 
 html {
   /* Base font-size to directly translate px to rem (50rem = 50px)  */
@@ -25,9 +21,6 @@ code {
   position: relative;
   margin: 20px auto 80px;
   width: 50%;
-}
-
-.sidenote {
 }
 
 .codeWrapper {
@@ -63,33 +56,6 @@ code {
   opacity: 1;
 }
 
-.filterInput {
-  display: block;
-  width: 150px;
-  height: 20px;
-  margin-bottom: 20px;
-  margin-left: auto;
-  padding: 5px 10px;
-  border: 1px solid var(--gray);
-  border-radius: 20px;
-  font-size: 15rem;
-  outline: none;
-}
-
-.filterInput:focus {
-  border: 1px solid var(--code-gray);
-}
-
-.list {
-  margin: 0 auto;
-  max-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style: none;
-  padding-left: 0;
-}
-
 .footer {
   display: block;
   margin: 10px 0 50px;
@@ -101,5 +67,5 @@ code {
 .footer__link,
 .footer__link:active,
 .footer__link:visited {
-  color: var(--gray-dark);
+  color: var(--gray);
 }
