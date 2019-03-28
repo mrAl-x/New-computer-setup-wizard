@@ -89,3 +89,17 @@ code {
   list-style: none;
   padding-left: 0;
 }
+
+.footer {
+  display: block;
+  margin: 10px 0 50px;
+  font-size: 12rem;
+  text-align: center;
+  font-style: italic;
+}
+.footer,
+.footer__link,
+.footer__link:active,
+.footer__link:visited {
+  color: var(--gray-dark);
+}

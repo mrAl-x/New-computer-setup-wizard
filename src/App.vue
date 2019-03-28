@@ -55,6 +55,14 @@
         >You won't be able to see yourself typing in the password but, don't worry, the terminal is paying attention 😉</small>
       </p>
     </main>
+    <footer class="footer">
+      Coded
+      <a
+        href="https://twitter.com/pixelmatters_"
+        target="_blank"
+        class="footer__link"
+      >@Pixelmatters</a>
+    </footer>
   </div>
 </template>
 
