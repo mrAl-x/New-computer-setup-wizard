@@ -1,8 +1,4 @@
-:root {
-  --code-gray: #1b2b34;
-  --white: #fff;
-  --green: #5eb468;
-}
+@import './shared/styles/variables.css';
 
 html {
   /* Base font-size to directly translate px to rem (50rem = 50px)  */
@@ -71,5 +67,5 @@ code {
 .footer__link,
 .footer__link:active,
 .footer__link:visited {
-  color: var(--gray-dark);
+  color: var(--gray);
 }

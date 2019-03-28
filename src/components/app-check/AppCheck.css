@@ -1,9 +1,3 @@
-:root {
-  --gray-light: #f0f0f0;
-  --gray: #ccc;
-  --gray-dark: #777;
-}
-
 .item {
   position: relative;
   flex: 20%;
