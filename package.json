@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "initialSetup",
-  "productName": "initialSetup",
-  "description": "My amazing Vue project",
-  "version": "0.0.0",
+  "name": "setupWizard",
+  "productName": "Setup Wizard",
+  "description": "This page allows you to pick multiple apps and install them all at once through your computer's terminal.",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "dev": "poi",
