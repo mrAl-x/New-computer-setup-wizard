@@ -20,7 +20,7 @@ code {
 .mainWrapper {
   position: relative;
   margin: 20px auto 80px;
-  width: 50%;
+  max-width: 800px;
 }
 
 .codeWrapper {
