@@ -161,4 +161,10 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/google-drive-file-stream.png',
     category: 'Organization',
   },
+  {
+    name: 'Blue Jeans',
+    code: 'blue-jeans',
+    logoUrl: 'shared/assets/app_logos/blue-jeans.png',
+    category: 'Communication',
+  },
 ];

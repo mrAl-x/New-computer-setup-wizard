@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "setupWizard",
-  "productName": "Setup Wizard",
+  "productName": "Setup Wizard 🧙‍♂️",
   "description": "This page allows you to pick multiple apps and install them all at once through your computer's terminal.",
   "version": "0.1.0",
   "license": "MIT",
