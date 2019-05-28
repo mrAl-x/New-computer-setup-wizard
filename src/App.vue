@@ -46,12 +46,8 @@
       </p>
     </main>
     <footer class="footer">
-      Coded
-      <a
-        href="https://twitter.com/pixelmatters_"
-        target="_blank"
-        class="footer__link"
-      >@Pixelmatters</a>
+      Coded by
+      <a href="https://twitter.com/mrAl_x" target="_blank" class="footer__link">@mrAl_x</a>
     </footer>
   </div>
 </template>
