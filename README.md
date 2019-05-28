@@ -1,6 +1,9 @@
 # Setup Wizard 🧙‍♂️
 
-This pages allows you to pick multiple apps and install them all at once through your computer's terminal.
+This page allows you to pick and install multiple apps at once through your mac's terminal using brew.
+
+## Demo
+You can see it live at: https://setupwizard.netlify.com/
 
 ## Commands
 
