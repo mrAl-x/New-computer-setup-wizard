@@ -173,4 +173,40 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/zoom.png',
     category: 'Communication',
   },
+  {
+    name: 'MySQL Workbench',
+    code: 'mysqlworkbench',
+    logoUrl: 'shared/assets/app_logos/mysqlworkbench.png',
+    category: 'Development',
+  },
+  {
+    name: 'Android SDK',
+    code: 'android-platform-tools',
+    logoUrl: 'shared/assets/app_logos/android-platform-tools.png',
+    category: 'Development',
+  },
+  {
+    name: 'IntelliJ IDEA',
+    code: 'intellij-idea-newest',
+    logoUrl: 'shared/assets/app_logos/intellij-idea-newest.png',
+    category: 'Development',
+  },
+  {
+    name: 'WebStorm',
+    code: 'webstorm',
+    logoUrl: 'shared/assets/app_logos/webstorm.png',
+    category: 'Development',
+  },
+  {
+    name: 'JetBrains Toolbox',
+    code: 'jetbrains-toolbox',
+    logoUrl: 'shared/assets/app_logos/webstorm.png',
+    category: 'Misc',
+  },
+  {
+    name: 'Cloudapp',
+    code: 'cloudapp',
+    logoUrl: 'shared/assets/app_logos/cloudapp.png',
+    category: 'Misc',
+  },
 ];
