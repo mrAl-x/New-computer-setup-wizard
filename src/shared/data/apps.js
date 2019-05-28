@@ -167,4 +167,10 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/blue-jeans.png',
     category: 'Communication',
   },
+  {
+    name: 'Zoom',
+    code: 'zoomus',
+    logoUrl: 'shared/assets/app_logos/zoom.png',
+    category: 'Communication',
+  },
 ];
