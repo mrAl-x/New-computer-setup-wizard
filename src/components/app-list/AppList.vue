@@ -1,7 +1,7 @@
 <template>
   <div>
     <label class="invisible" for="searchBox">Search app</label>
-    <input type="text" id="searchBox" class="filterInput" v-model="filter" placeholder="Search">
+    <input type="text" id="searchBox" class="filterInput" v-model="filter" placeholder="Search" />
     <ul class="categoryList">
       <li class="category" v-for="(category, index) in categories" :key="index">
         <h2
@@ -63,12 +63,27 @@ export default {
 
       return categories;
     },
+
+    sortAlphabetically(list) {
+      return list.sort((first, second) => {
+        if (first.name < second.name) {
+          return -1;
+        }
+
+        if (first.name > second.name) {
+          return 1;
+        }
+
+        return 0;
+      });
+    },
+
     appsOfCategory(category) {
       const appsOfCategory = this.filteredApps.filter(
         app => app.category === category
       );
 
-      return appsOfCategory;
+      return this.sortAlphabetically(appsOfCategory);
     }
   }
 };

@@ -209,4 +209,40 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/cloudapp.png',
     category: 'Misc',
   },
+  {
+    name: 'Tunnelblick',
+    code: 'tunnelblick',
+    logoUrl: 'shared/assets/app_logos/tunnelblick.png',
+    category: 'Misc',
+  },
+  {
+    name: 'Pocket Casts',
+    code: 'pocket-casts',
+    logoUrl: 'shared/assets/app_logos/pocket-casts.png',
+    category: 'Misc',
+  },
+  {
+    name: 'Signal',
+    code: 'signal',
+    logoUrl: 'shared/assets/app_logos/signal.png',
+    category: 'Communication',
+  },
+  {
+    name: 'Whatsapp',
+    code: 'whatsapp',
+    logoUrl: 'shared/assets/app_logos/whatsapp.png',
+    category: 'Communication',
+  },
+  {
+    name: 'Telegram',
+    code: 'telegram',
+    logoUrl: 'shared/assets/app_logos/telegram.png',
+    category: 'Communication',
+  },
+  {
+    name: 'Mailspring',
+    code: 'mailspring',
+    logoUrl: 'shared/assets/app_logos/mailspring.png',
+    category: 'Communication',
+  },
 ];
