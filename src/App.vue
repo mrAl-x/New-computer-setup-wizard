@@ -28,7 +28,7 @@
         >{{successMessage.homebrew}}</p>
       </div>
       <p>Pick select the apps you want to install:</p>
-      <AppList @handleAppCheck="updateCode"/>
+      <AppList @handleAppCheck="updateCode" />
       <p>Finally you can copy and paste the code bellow on your terminal and you're golden! 👌</p>
       <div class="codeWrapper">
         <code id="cask" class="codeArea" @click="copyContent" ref="caskCodeLine">
@@ -39,7 +39,7 @@
       </div>
       <p>
         Oh! One more thing you'll have to enter your password in the terminal
-        <br>
+        <br />
         <small
           class="sidenote"
         >You won't be able to see yourself typing in the password but, don't worry, the terminal is paying attention 😉</small>
@@ -69,6 +69,7 @@ export default {
       }
     };
   },
+
   methods: {
     copyContent(e) {
       const regex = /[^$]*/g;
@@ -83,6 +84,7 @@ export default {
         }, 2000);
       });
     },
+
     updateCode(app) {
       if (app.isChecked) {
         this.selectedApps = [...this.selectedApps, app.code];

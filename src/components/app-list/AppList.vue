@@ -1,7 +1,14 @@
 <template>
   <div>
     <label class="invisible" for="searchBox">Search app</label>
-    <input type="text" id="searchBox" class="filterInput" v-model="filter" placeholder="Search" />
+    <input
+      type="text"
+      id="searchBox"
+      class="filterInput"
+      v-model="filter"
+      ref="searchInput"
+      placeholder="Search"
+    />
     <ul class="categoryList">
       <li class="category" v-for="(category, index) in categories" :key="index">
         <h2
@@ -40,6 +47,13 @@ export default {
   created() {
     this.categories = this.getCategories();
   },
+
+  mounted() {
+    const searchInput = this.$refs.searchInput;
+
+    this.inputFocus(searchInput);
+  },
+
   computed: {
     filteredApps() {
       /* Regex will be case insentive */
@@ -84,6 +98,10 @@ export default {
       );
 
       return this.sortAlphabetically(appsOfCategory);
+    },
+
+    inputFocus(ref) {
+      ref.focus();
     }
   }
 };
