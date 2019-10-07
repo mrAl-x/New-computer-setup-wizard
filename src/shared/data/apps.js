@@ -245,4 +245,10 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/mailspring.png',
     category: 'Communication',
   },
+  {
+    name: 'Brave Browser',
+    code: 'brave-browser',
+    logoUrl: 'shared/assets/app_logos/brave-browser.png',
+    category: 'Browser',
+  },
 ];
