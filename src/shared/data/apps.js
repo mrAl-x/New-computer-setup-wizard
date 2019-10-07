@@ -251,4 +251,10 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/brave-browser.png',
     category: 'Browser',
   },
+  {
+    name: 'Keybase',
+    code: 'keybase',
+    logoUrl: 'shared/assets/app_logos/keybase.png',
+    category: 'Communication',
+  },
 ];
