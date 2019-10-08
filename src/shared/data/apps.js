@@ -257,4 +257,10 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/keybase.png',
     category: 'Communication',
   },
+  {
+    name: 'Dynamic Dark Mode',
+    code: 'dynamic-dark-mode',
+    logoUrl: 'shared/assets/app_logos/dynamic-dark-mode.png',
+    category: 'Misc',
+  },
 ];
