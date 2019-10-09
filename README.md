@@ -22,3 +22,11 @@ yarn test
 # serve the bundled dist folder in production mode
 yarn serve
 ```
+
+## Updating Apps List
+
+To update the listed apps just change the data in:
+```
+src/shared/data/apps.js
+```
+
