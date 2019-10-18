@@ -263,4 +263,10 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/dynamic-dark-mode.png',
     category: 'Misc',
   },
+  {
+    name: 'Abstract',
+    code: 'abstract',
+    logoUrl: 'shared/assets/app_logos/abstract.png',
+    category: 'Design',
+  },
 ];
