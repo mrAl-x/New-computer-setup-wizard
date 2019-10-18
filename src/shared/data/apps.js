@@ -189,13 +189,13 @@ module.exports = [
     name: 'IntelliJ IDEA',
     code: 'intellij-idea-newest',
     logoUrl: 'shared/assets/app_logos/intellij-idea-newest.png',
-    category: 'Development',
+    category: 'Text-editor',
   },
   {
     name: 'WebStorm',
     code: 'webstorm',
     logoUrl: 'shared/assets/app_logos/webstorm.png',
-    category: 'Development',
+    category: 'Text-editor',
   },
   {
     name: 'JetBrains Toolbox',
