@@ -46,8 +46,18 @@
       </p>
     </main>
     <footer class="footer">
-      Coded by
-      <a href="https://twitter.com/mrAl_x" target="_blank" class="footer__link">@mrAl_x</a>
+      <span>
+        Coded by
+        <a href="https://twitter.com/mrAl_x" target="_blank" class="footer__link">@mrAl_x</a>
+      </span>
+      <a href="https://github.com/mrAl-x/setup_wizard" alt="Github repository" target="_blank">
+        <img
+          src="./shared/assets/images/github.png"
+          class="footer__icon"
+          alt="Github logo"
+          aria-hidden
+        />
+      </a>
     </footer>
   </div>
 </template>

@@ -57,12 +57,21 @@ code {
 }
 
 .footer {
-  display: block;
-  margin: 10px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 150px;
+  margin: 10px auto 50px;
   font-size: 12rem;
   text-align: center;
   font-style: italic;
 }
+
+.footer__icon {
+  width: 24px;
+  height: 24px;
+}
+
 .footer,
 .footer__link,
 .footer__link:active,
