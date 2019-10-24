@@ -269,4 +269,10 @@ module.exports = [
     logoUrl: 'shared/assets/app_logos/abstract.png',
     category: 'Design',
   },
+  {
+    name: 'Chromium',
+    code: 'chromium',
+    logoUrl: 'shared/assets/app_logos/chromium.png',
+    category: 'Browser',
+  },
 ];
