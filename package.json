@@ -22,7 +22,7 @@
     "vue-clipboard2": "^0.3.0"
   },
   "devDependencies": {
-    "poi": "^9.0.0",
+    "poi": "^12.10.3",
     "poi-preset-bundle-report": "^2.0.0",
     "serve": "^10.1.2"
   }
